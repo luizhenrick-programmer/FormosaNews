@@ -16,14 +16,11 @@
         <!-- Scripts -->
         @vite(['resources/sass/app.scss', 'resources/js/app.js'])
     </head>
-    <body class="font-sans antialiased">
+    <body class="font-sans antialiased flex flex-col min-h-screen">
         <header>
             @include('partials.header')
         </header>   
-        <nav>
-            @include('partials.menu')
-        </nav>
-        <main>
+        <main class="flex-1">
             @yield('content')
             {{ $slot }}
         </main>   

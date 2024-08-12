@@ -1,4 +1,4 @@
-<x-app-layout>
+<x-app-layout class="flex-1">
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             {{ __('Página de Noticias') }}
