@@ -33,13 +33,14 @@ class Noticia extends Model
     }
 
     public function storeArquivo($arquivo)
-{
-    if ($arquivo) {
-        $path = $arquivo->store('arquivos', 'public'); // Armazena o arquivo
-        $this->url = $path; // Armazena o caminho relativo
-        $this->save(); // Salva o caminho no banco de dados
+    {
+        if($arquivo) {
+            $path = $arquivo->store('arquivos', 'public');//caminho onde o arquivo será salvo
+            $this->url = Storage::url($path); //caminho completo para acessar o arquivo
+            $this->save();//salva o caminho no banco de dados
+        }
+
     }
-}
 
 
     public function toSearchchableArray(){
