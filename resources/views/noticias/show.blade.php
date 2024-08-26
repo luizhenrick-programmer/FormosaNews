@@ -20,7 +20,7 @@
 
                         <div class="mt-6">
                            @if($noticia->url)
-                                <img src="{{ asset($noticia->url) }}" alt="{{ $noticia->titulo }}" class="max-w-full h-auto">
+                                <img src="{{ asset($noticia->url) }}" alt="{{ $noticia->titulo }}" class="w-50 h-50 object-fit-cover border rounded m-auto">
                             @endif
                         </div>
                     </div>

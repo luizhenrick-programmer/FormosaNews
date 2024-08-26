@@ -24,7 +24,14 @@
 
     <div class="container">
         <h1>Noticias</h1>
-        <a href="{{ route('noticias.create') }}" class="btn btn-primary">Criar Noticia</a>
+        <a href="{{ route('noticias.create') }}" class="btn btn-primary">Criar Notícia</a>
+        @if ($message = Session::get('success'))
+            <div class="alert alert-success mt-2">
+                <p>{{ $message }}</p>
+            </div>
+        @endif
+
+        <a href="{{ route('home') }}" class="btn btn-primary">Visualizar Todas as Notícias</a>
         @if ($message = Session::get('success'))
             <div class="alert alert-success mt-2">
                 <p>{{ $message }}</p>
